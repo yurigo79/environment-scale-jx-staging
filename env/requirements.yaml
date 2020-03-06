@@ -10,3 +10,6 @@ dependencies:
 - name: scale-jx-workshop-quickstart
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
+- name: skiapp
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.43
