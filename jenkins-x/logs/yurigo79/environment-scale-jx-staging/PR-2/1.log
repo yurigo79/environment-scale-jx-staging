@@ -1,0 +1,40 @@
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7dcnv[0m
+{"level":"warn","ts":1583454100.4789226,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583454100.4798477,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-j7rpj[0m
+{"level":"warn","ts":1583454101.3173566,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583454101.3194804,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-yurigo79-environment-scale-jx-s-q9r82-mlsgj[0m
+{"level":"warn","ts":1583454107.500442,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583454108.1295304,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/********/environment-scale-**-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b75c99a3d978415d94f84797d0464be9b49859e0,2:5e5b785a5329104d81d2e8c1f547a393c903218b
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 5e5b785a5329104d81d2e8c1f547a393c903218b: b75c99a3d978415d94f84797d0464be9b49859e0:
+DEBUG: ran git fetch --unshallow origin 5e5b785a5329104d81d2e8c1f547a393c903218b: b75c99a3d978415d94f84797d0464be9b49859e0: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard b75c99a3d978415d94f84797d0464be9b49859e0
+DEBUG: ran git reset --hard b75c99a3d978415d94f84797d0464be9b49859e0 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 5e5b785a5329104d81d2e8c1f547a393c903218b
+DEBUG: ran git merge 5e5b785a5329104d81d2e8c1f547a393c903218b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e b75c99a3d978415d94f84797d0464be9b49859e0..HEAD
+Merged SHA 5e5b785a5329104d81d2e8c1f547a393c903218b with commit message 'chore: Promote skiapp to version 0.0.43' into base branch master
+
+Showing logs for build [32myurigo79-environment-scale-jx-s-q9r82-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
